@@ -1,0 +1,68 @@
+.bar-chart {
+	@extend %clearfix;
+	display: block;
+	text-align: right;
+
+	.bar-chart-data {
+		display: block;
+		margin: 0;
+		padding: 0;
+		background-color: gray;
+		float: left;
+		position: relative;
+		text-align: right;
+		color: white;
+		border-right: solid thin white;
+		padding-right: 3px;
+
+		&:last-of-type {
+		}
+		
+		.bar-chart-data-label {
+			position: absolute;
+			top: 100%;
+			right: 0;
+			text-align: right;
+			white-space: nowrap;
+		}
+	}
+}
+
+.data-container {
+	background-color: #eee;
+}
+
+.module {
+	border: solid thin lightgray;
+}
+
+.execution {
+	position: relative;
+}
+
+.progress-bar-container {
+	position: absolute;
+	padding: $pad;
+	width: 300px;
+	height: 100px;
+	margin-left: -150px;
+	margin-top: -50px;
+	top: 50%;
+	left: 50%;
+	background-color: #fff;
+	border: solid thin lightgray;
+	z-index: 999;
+
+	.progress-bar {
+		@extend %clearfix;
+		margin-top: $pad;
+		width: 100%;
+		border: solid thin lightgray;
+
+		.progress-bar-data {
+			float: left;
+			height: 10px;
+			background-color: lightgray;
+		}
+	}
+}

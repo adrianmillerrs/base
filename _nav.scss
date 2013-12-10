@@ -1,0 +1,22 @@
+nav li {
+	a {
+		&:hover {
+			cursor: pointer;
+		}
+	}
+	&.cursor a:hover {
+		cursor: default;
+	}
+}
+
+.horizontal-nav {
+	@extend %clearfix;
+	li {
+		float: left;
+		padding: 0 $pad/2;
+	}
+}
+
+.vertical-nav li .sub-menu {
+	margin-left: $pad;
+}

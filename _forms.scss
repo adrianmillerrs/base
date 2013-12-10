@@ -1,0 +1,51 @@
+fieldset {
+	.control-group {
+		margin-bottom: $pad;
+		
+		.control-label {
+
+		}
+		.controls {
+
+		}
+	}
+}
+
+input, textarea { outline: none; }
+
+input[type="text"], textarea {
+	border: solid thin gray;
+	padding: 2px;
+	padding-left: 6px;
+
+	&:focus {
+		border-left: solid 5px gray;
+		padding-left: 2px;
+	}
+}
+
+input[type="search"] {
+	width: 1em;
+	border-radius: 1emw;
+	padding: 0 .5em;
+	&:focus {
+		width: 150px;
+	}
+}
+
+.filters {
+	float: right;
+	.filter {
+		float: left;
+	}
+}
+
+label.required {
+	&:after {
+		content: "*";
+		color: red;
+		&:hover {
+			cursor: default;
+		}
+	}
+}

@@ -1,0 +1,65 @@
+.layout-content {
+
+  // display: inline-block;
+
+  &.ng-enter {
+    transition: 800ms;
+    width: 100%;
+    opacity: 0;
+    transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1.2);
+
+    &.ng-enter-active {
+      opacity: 1;
+    }
+  }
+
+  &.ng-leave {
+    transition: 800ms;
+    width: 100%;
+    opacity: 1;
+
+    &.ng-leave-active {
+      opacity: 0;
+    }
+  }
+}
+
+.forward .layout-content {
+  &.ng-enter {
+    margin-right: -110%;
+    float: right;
+
+    &.ng-enter-active {
+      margin-right: 0;
+    }
+  }
+
+  &.ng-leave {
+    margin-left: 0;
+    float: left;
+
+    &.ng-leave-active {
+      margin-left: -110%;
+    }
+  }
+}
+
+.backward .layout-content {
+  &.ng-enter {
+    margin-left: -110%;
+    float: left;
+
+    &.ng-enter-active {
+      margin-left: 0;
+    }
+  }
+
+  &.ng-leave {
+    margin-right: 0;
+    float: right;
+
+    &.ng-leave-active {
+      margin-right: -110%;
+    }
+  }
+}
