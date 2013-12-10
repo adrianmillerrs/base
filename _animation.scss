@@ -1,0 +1,129 @@
+@include keyframes(fadeOutRight) {
+  0% {
+  }
+  20% {
+    opacity: 1;
+    @include transform(translateX(-4px));
+  }
+  100% {
+    opacity: 0;
+    @include transform(translateX(20px));
+  }
+}
+
+@include keyframes(slideInLeft) {
+  0% {
+  }
+  20% {
+    opacity: 0;
+    @include transform(translateX(-5px));
+  }
+  100% {
+    opacity: 1;
+    @include transform(translateX(5px));
+  }
+}
+
+@include keyframes(fadeOutLeft) {
+  0% {
+  }
+  20% {
+    opacity: 1;
+    @include transform(translateX(4px));
+  }
+  100% {
+    opacity: 0;
+    @include transform(translateX(-20px));
+  }
+}
+
+@include keyframes(fadeInRight) {
+  0% {
+    opacity: 0;
+    @include transform(translateX(-20px));
+  }
+  20% {
+    opacity: 1;
+    @include transform(translateX(4px));
+  }
+  100% {
+    @include transform(translateX(0));
+  }
+}
+
+@include keyframes(fadeInLeft) {
+  0% {
+    opacity: 0;
+    @include transform(translateX(20px));
+  }
+  20% {
+    opacity: 1;
+    @include transform(translateX(-4px));
+  }
+  100% {
+    @include transform(translateX(0));
+  }
+}
+
+@include keyframes(rotateForwardIn) {
+  0% {
+    opacity: 0;
+    @include transform(translateY(-20px) rotateX(90deg) perspective(20px));
+    // @include transform(rotateX(-90deg));
+  }
+  100% {
+    opacity: 1;
+    @include transform(translateY(0) rotateX(0) perspective(0));
+    // @include transform(rotateX(0deg));
+  }
+}
+
+@include keyframes(slideInBottom) {
+  0% {
+    @include transform(translateY(0%));
+    // @include transform(rotateX(-90deg));
+  }
+  100% {
+    @include transform(translateY(-100%));
+    // @include transform(rotateX(0deg));
+  }
+}
+
+@include keyframes(slideInTop) {
+  0% {
+    @include transform(translateY(-100%));
+    // @include transform(rotateX(-90deg));
+  }
+  100% {
+    @include transform(translateY(0%));
+    // @include transform(rotateX(0deg));
+  }
+}
+
+@include keyframes(delayFadeOut) {
+
+  0% {
+    opacity: 1;
+  }
+
+  30% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@include keyframes(fadeIn) {
+
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

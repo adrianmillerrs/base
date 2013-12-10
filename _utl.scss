@@ -1,0 +1,19 @@
+// Box Sizing
+@mixin box-sizing($box-sizing) {
+  * {
+	-webkit-box-sizing: $box-sizing;
+		 -moz-box-sizing: $box-sizing;
+					box-sizing: $box-sizing;
+  }
+}
+
+// Clearfix
+%clearfix:after {
+  content: "";
+  display: table;
+  clear: both;  
+}
+
+%clearfix {
+  zoom: 1;
+}

@@ -1,0 +1,131 @@
+@mixin grid-base($pad: 1em) {
+	@include box-sizing(border-box);
+
+	/* Grid styles */
+	[class*='col-'] {
+		float: left;
+		width: 100%;
+	}
+
+	.grid {
+		margin-bottom: $pad;
+	  	@include clearfix();
+	}
+	
+	@media screen and (min-width: 480px)
+	{
+		[class*='col-'] {
+		  padding-right: $pad;
+		  &:last-of-type {
+		  	padding-right: 0;
+		  }
+		}
+	}
+	
+	/* Opt-in outside padding */
+	.grid-pad {
+	  padding: $pad 0 $pad $pad;
+
+	  &.no-box {
+	  	margin-bottom: 0;
+	  	padding-bottom: 0;
+	  	padding-top: 0;
+	  	[class*='col-'] > .module {
+	  		// padding-top: $pad;
+	  	}
+	  }
+	  
+	  [class*='col-']:last-of-type {
+	    padding-right: $pad;
+	  }
+	}
+}
+
+@mixin container-width($media-full: 1080px, $media-screen: 920px, $media-tablet: 720px, $media-mobile: 360px) {
+	
+	@media screen and (min-width: $media-mobile)  {
+		.mobile-half {
+			max-width: 50%;
+			float: left;
+		}
+	}
+	
+	@media screen and (min-width: $media-tablet)  {
+		.mobile-half {
+			max-width: auto;
+			float: none;
+		}
+		.col-1-2 {
+			max-width: percentage(1/2);
+			
+		}
+		
+		.col-1-3 {
+			max-width: percentage(1/3);
+		}
+		
+		.col-2-3 {
+			max-width: percentage(2/3);
+		}
+		
+		.col-1-4 {
+			max-width: percentage(1/4);
+		}
+		
+		.col-3-4 {
+			max-width: percentage(3/4);
+		}
+		
+		.col-1-5 {
+			max-width: percentage(1/5)
+		}
+		
+		.col-2-5 {
+			max-width: percentage(2/5)
+		}
+		
+		.col-3-5 {
+			max-width: percentage(3/5)
+		}
+		
+		.col-4-5 {
+			max-width: percentage(4/5)
+		}
+		
+		.col-1-6 {
+			max-width: percentage(1/6);
+		}
+		
+		.col-5-6 {
+			max-width: percentage(5/6);
+		}
+		
+		.col-1-8 {
+			max-width: percentage(1/8);
+		}
+		
+		.col-3-8 {
+			max-width: percentage(3/8);
+		}
+		
+		.col-5-8 {
+			max-width: percentage(5/8);
+		}
+		
+		.col-7-8 {
+			max-width: percentage(7/8);
+		}
+	}	
+	
+	@media screen and (min-width: $media-screen)  {
+		.container {
+			// max-width: $media-screen;
+		}
+	}
+	
+	@media screen and (min-width: $media-full)  {
+		.container {
+			// max-width: $media-full;
+		}
+	}
+}
